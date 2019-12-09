@@ -121,3 +121,8 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+
+- task: sonarcloud-buildbreaker@2
+  inputs:
+    SonarCloud: 'SonarCloud connection'
+    organization: 'balazsdevops'
